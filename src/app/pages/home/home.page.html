@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-toolbar mode="ios" color="primary">
+        <ion-title>
+            Registrar
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding no-bounce>
+
+
+
+
+    <div #fixedContainer slot="fixed">
+        <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Apellido</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Correo</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Confirmar</ion-label>
+            <ion-radio slot="start" value="biff"></ion-radio>
+        </ion-item>
+        <ion-row radio-group [(ngModel)]="selectedColor">
+
+        </ion-row>
+
+        <canvas #imageCanvas (touchstart)="startDrawing($event)" (touchmove)="moved($event)"> </canvas>
+        <ion-button expand="full" (click)="savedCanvas()">Save</ion-button>
+        <!--
+<ion-button expand="full" fill="outline" shape="round" (click)="clearCanvas()">Clear</ion-button>
+-->
+
+
+    </div>
+
+</ion-content>
